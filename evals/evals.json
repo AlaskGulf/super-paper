@@ -1,0 +1,23 @@
+{
+  "skill_name": "paper-reader",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "帮我读一下 Zotero 里那篇 Explainable Semantic Communication for Text Tasks 的论文，做完整总结。",
+      "expected_output": "七段式结构化总结：包含论文速览、背景动机、方法详解、实验设置、实验结果与分析、结论展望、快速参考（术语表+核心引用），全中文输出，方法部分有直觉解释而非公式罗列，术语表包含关键缩写。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "我 Zotero 里有一篇关于 OFDM 语义通信的论文（OFDM-Based Digital Semantic Communication with Importance Awareness），帮我精读分析一下。",
+      "expected_output": "七段式结构化总结，方法详解中覆盖 OFDM 与语义通信的结合方式、重要性感知机制，实验部分有关键性能数字。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "帮我读一下我 Zotero 里面最近添加的那篇 lightweight task-oriented semantic communication 论文——就是那篇用 knowledge distillation 做语义通信的。",
+      "expected_output": "七段式结构化总结，方法部分覆盖知识蒸馏在语义通信中的应用、快速蒸馏方法、信道自适应模块，术语表包含 KD、LAI 等缩写。",
+      "files": []
+    }
+  ]
+}
