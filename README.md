@@ -1,6 +1,7 @@
 # Super-paper skill
 
 Zotero 论文精读 skill —— 从 Zotero 提取论文，输出 Obsidian 兼容的八段式结构化 Markdown 总结 + Obsidian Canvas 逻辑流画板。
+
 搭建 Obsidian + Zotero + Claude Code 整套工作流
 
 ## 功能
