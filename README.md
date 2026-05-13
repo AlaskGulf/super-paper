@@ -1,62 +1,64 @@
 # Super-paper skill
 
-Zotero 论文精读 skill —— 从 Zotero 提取论文，输出 Obsidian 兼容的八段式结构化 Markdown 总结 + Obsidian Canvas 逻辑流画板。
+A Claude Code skill for deep reading academic papers from Zotero — producing Obsidian-compatible structured Markdown summaries (8 sections) and JSON Canvas visual logic flow boards.
 
-搭建 Obsidian + Zotero + Claude Code 整套工作流
+Building a complete Obsidian + Zotero + Claude Code research workflow.
 
-## 功能
+> [中文文档](README.zh.md)
 
-四步工作流：
+## Features
 
-1. **定位** — 在 Zotero 中按关键词/分类/最近添加搜索论文
-2. **提取** — 获取元数据、全文、标注，支持多种 PDF 提取器
-3. **结构化总结** — 八段式 Markdown 总结（速览 → 背景 → 方法 → 实验 → 结论 → 参考），全中文输出
-4. **逻辑流画板** — 自动生成 `.canvas` 文件，在 Obsidian Canvas 中可视化论文逻辑骨架
+Four-step workflow:
 
-## 依赖 Skill
+1. **Locate** — Search papers in Zotero by keyword, collection, or recently added
+2. **Extract** — Fetch metadata, full text, and annotations with support for multiple PDF extractors
+3. **Summarize** — Generate an 8-section structured Markdown summary (overview → background → method → experiments → conclusion → references)
+4. **Visualize** — Auto-generate `.canvas` files for logic flow diagrams viewable in Obsidian Canvas
 
-安装本 skill 前，请确保已安装以下 skill：
+## Dependencies
 
-| Skill | 用途 |
-|-------|------|
-| [zotero-cli-cc](https://github.com/AlaskGulf/zotero-cli-cc) | Zotero 文献检索、PDF 提取 |
-| [obsidian-markdown](https://github.com/AlaskGulf/obsidian-markdown) | Obsidian 兼容的 Markdown 写入 |
-| [obsidian-bases](https://github.com/AlaskGulf/obsidian-bases) | Dataview 兼容的数据表格式 |
-| [json-canvas](https://github.com/AlaskGulf/json-canvas) | Obsidian Canvas 画板生成 |
+Install the following skills before using Super-paper:
 
-## 安装
+| Skill | Purpose |
+|-------|---------|
+| [zotero-cli-cc](https://github.com/AlaskGulf/zotero-cli-cc) | Zotero search & PDF extraction |
+| [obsidian-markdown](https://github.com/AlaskGulf/obsidian-markdown) | Obsidian-compatible Markdown output |
+| [obsidian-bases](https://github.com/AlaskGulf/obsidian-bases) | Dataview-compatible data tables |
+| [json-canvas](https://github.com/AlaskGulf/json-canvas) | Obsidian Canvas generation |
 
-### 方式一：克隆到用户 skills 目录
+## Installation
+
+### Option 1: Clone to user skills directory
 
 ```bash
 git clone https://github.com/AlaskGulf/super-paper.git ~/.claude/skills/Super-paper
 ```
 
-### 方式二：通过 Marketplace 安装（如已注册）
+### Option 2: Via Marketplace (once registered)
 
 ```bash
 claude skills install super-paper
 ```
 
-## 使用
+## Usage
 
-在 Claude Code 对话中表达读论文意图即可触发：
-
-```
-帮我读一下 Zotero 里那篇 Semantic Communication 的论文
-```
-
-或明确调用：
+Express your intent to read a paper in a Claude Code conversation:
 
 ```
-/super-paper 读最近添加的论文
+Read and summarize the "Semantic Communication" paper from my Zotero library
 ```
 
-## 输出示例
+Or invoke explicitly:
 
-- `<论文中文译名>.md` — 八段式结构化总结
-- `<论文简写>_logic.canvas` — 论文逻辑流画板
-- `<论文简写>_arch.canvas`（按需）— 技术架构画板
+```
+/super-paper analyze the most recently added paper
+```
+
+## Output
+
+- `<paper-title>.md` — 8-section structured summary
+- `<paper-slug>_logic.canvas` — Paper logic flow canvas
+- `<paper-slug>_arch.canvas` (on demand) — Technical architecture canvas
 
 ## License
 
